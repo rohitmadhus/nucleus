@@ -1,0 +1,66 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="float: right; width: 200px; margin: 10px 0px"
+  (click)="openCategoryDialog(createNewCategory())"
+>
+  Create category
+</button>
+<table class="table">
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col span="2" style="width: 50px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col" colspan="2">Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{ categories.indexOf(category) }}</td>
+      <td>{{ category.type }}</td>
+      <td>{{ category.name }}</td>
+      <td>
+        <a (click)="openCategoryDialog(category)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="edit"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a (click)="openConfirmDialog(category)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="delete"
+          ></mat-icon>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div
+  style="
+    padding: 8px 0px;
+    display: flex;
+    justify-content: center;
+    background: rgb(0 0 0 / 14%);
+  "
+>
+  <a (click)="loadMore()">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="edit"
+      fontIcon="keyboard_arrow_down"
+    ></mat-icon>
+    Load more
+  </a>
+</div>

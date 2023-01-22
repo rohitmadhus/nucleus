@@ -1,0 +1,49 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="float: right; width: 200px; margin: 10px 0px"
+  (click)="openContentTypeDialog(createNewContentType())"
+>
+  Create age group
+</button>
+<table class="table">
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col span="2" style="width: 50px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Group</th>
+      <th scope="col">Age more than</th>
+      <th scope="col" colspan="2">Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ageGroup of ageGroups">
+      <td>{{ ageGroups.indexOf(ageGroup) }}</td>
+      <td>{{ ageGroup.group }}</td>
+      <td>{{ ageGroup.ageMoreThan }}</td>
+      <td>
+        <a (click)="openContentTypeDialog(ageGroup)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="edit"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a (click)="openConfirmDialog(ageGroup)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="delete"
+          ></mat-icon>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

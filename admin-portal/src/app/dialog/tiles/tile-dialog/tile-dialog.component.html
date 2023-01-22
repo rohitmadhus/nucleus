@@ -1,0 +1,153 @@
+<div style="padding: 60px 30px">
+  <h6 style="display: flex; justify-content: center">Add Content</h6>
+  <mat-divider></mat-divider>
+  <form [formGroup]="tileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="tile">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Tile"
+        name="title"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-row" style="display: flex">
+      <div class="form-group col-md-5" style="margin-right: 10px">
+        <label for="type">Type</label>
+        <select
+          class="form-control"
+          id="type"
+          name="typeId"
+          formControlName="typeId"
+        >
+          <option *ngFor="let type of tileTypes" [ngValue]="type.id">
+            {{ type.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group col-md-5" style="margin-left: 10px">
+        <label for="ageGroup">Age Group</label>
+        <select
+          class="form-control"
+          id="ageGroup"
+          name="allowedAgeGroupId"
+          formControlName="allowedAgeGroupId"
+        >
+          <option *ngFor="let ageGroup of ageGroups" [ngValue]="ageGroup.id">
+            {{ ageGroup.group }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-md-5">
+      <label for="categories">Categories</label>
+      <select
+        multiple
+        class="form-control"
+        id="categories"
+        name="categoryIds"
+        formControlName="categoryIds"
+      >
+        <option *ngFor="let category of categories" [ngValue]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="url">URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="url"
+        name="url"
+        formControlName="url"
+        placeholder="URL"
+      />
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imageUrl"
+        name="imageUrl"
+        formControlName="imageUrl"
+        placeholder="Image URL"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fallbackUrl">Fallback URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fallbackUrl"
+        name="fallbackUrl"
+        formControlName="fallbackUrl"
+        placeholder="Fallback URL"
+      />
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="enableGoogleAds"
+          name="enableGoogleAds"
+          formControlName="enableGoogleAds"
+        />
+        <label class="form-check-label" for="enableGoogleAds">
+          Enable Google Ads
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="bg1ColorHex">Backgound color primary</label>
+      <input
+        type="text"
+        class="form-control"
+        id="bg1ColorHex"
+        name="bg1ColorHex"
+        formControlName="bg1ColorHex"
+        placeholder="Backgound color primary"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="bg2ColorHex">Backgound color secondary</label>
+      <input
+        type="text"
+        class="form-control"
+        id="bg2ColorHex"
+        name="bg2ColorHex"
+        formControlName="bg2ColorHex"
+        placeholder="Backgound color secondary"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="textColorHex">Text color</label>
+      <input
+        type="text"
+        class="form-control"
+        id="textColorHex"
+        name="textColorHex"
+        formControlName="textColorHex"
+        placeholder="Text color"
+      />
+    </div>
+    <div class="form-group" style="display: flex; justify-content: center">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="width: 200px"
+        [disabled]="!tileForm.valid"
+      >
+        {{ submitButton }}
+      </button>
+    </div>
+  </form>
+</div>

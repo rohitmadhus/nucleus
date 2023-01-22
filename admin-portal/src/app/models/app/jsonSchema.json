@@ -1,0 +1,55 @@
+{
+  "content": {
+    "id": "string",
+    "title": "string",
+    "subTitle": "string",
+    "viewOrder": 1,
+    "body": "string",
+    "author": "string",
+    "createdDate": 1672776759268,
+    "lastUpdatedDate": 1672776759268,
+    "publishedDate": 1672776759268,
+    "published": true,
+    "web": { "published": true, "publishedDate": 1672776759268 },
+    "typeId": "string",
+    "categoryId": "string",
+    "notification": { "allowed": true, "scheduledDate": 1672776759268 },
+    "webReference": { "url": "string", "label": "string" },
+    "image": {
+      "url": "string",
+      "label": "string",
+      "shadowColorHex": "string"
+    },
+    "likes": 1672776759268,
+    "saves": 1672776759268,
+    "share": { "url": "string", "label": "string" },
+    "ads": { "enableGoogleAdMob": true },
+    "allowedAgeGroupId": "string",
+    "subContentIds": ["a"]
+  },
+  "tile": {
+    "id": "string",
+    "title": "string",
+    "createdDate": 1672776759268,
+    "lastUpdatedDate": 1672776759268,
+    "publishedDate": 1672776759268,
+    "published": true,
+    "typeId": "string",
+    "image": {
+      "url": "string",
+      "label": "string",
+      "shadowColorHex": "string"
+    },
+    "customization": {
+      "bg1ColorHex": "string",
+      "bg2ColorHex": "string",
+      "textColorHex": "string"
+    },
+    "url": "string",
+    "fallbackUrl": "string",
+    "notification": { "allowed": true, "scheduledDate": 1672776759268 },
+    "ads": { "enableGoogleAdMob": true },
+    "allowedAgeGroupId": "string",
+    "categoryIds": ["string"]
+  }
+}

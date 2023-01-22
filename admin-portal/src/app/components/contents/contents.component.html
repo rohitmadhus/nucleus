@@ -1,0 +1,72 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="float: right; width: 200px; margin: 10px 0px"
+  (click)="openContentDialog(createNewContent())"
+>
+  Create content
+</button>
+<table class="table">
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col span="3" style="width: 50px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Age Group</th>
+      <th scope="col">Categories</th>
+      <th scope="col">Content types</th>
+      <th scope="col">Published</th>
+      <th scope="col" colspan="3">Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let content of contents">
+      <td>{{ content.title }}</td>
+      <td>{{ this.findAgeGroup(content.allowedAgeGroupId) }}</td>
+      <td>{{ this.findCategory(content.categoryId) }}</td>
+      <td>{{ this.findContentType(content.typeId) }}</td>
+      <td>{{ content.published }}</td>
+      <td>
+        <a (click)="openContentDialog(content)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="edit"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a
+          (click)="
+            openConfirmDialog(content, getDeleteMessage(content), deleteContent)
+          "
+        >
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="delete"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a
+          (click)="
+            openConfirmDialog(
+              content,
+              getPublishMessage(content),
+              publishContent
+            )
+          "
+        >
+          Publish
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

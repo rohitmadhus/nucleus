@@ -1,0 +1,151 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "title": "title",
+      "subTitle": "subTitle",
+      "body": "content body",
+      "author": "a@gmail.com",
+      "lastUpdatedDate": "2012-04-23T18:25:43.511Z",
+      "publishedDate": "2012-04-23T18:25:43.511Z",
+      "published": true,
+      "webPublish": true,
+      "typeId": "1",
+      "categoryId": "f443e209-b568-428f-8f6b-6d34ff8abfce",
+      "pushNotification": false,
+      "webReference": "url",
+      "imageUrl": "http://",
+      "likes": 10,
+      "saves": 10,
+      "shareUrl": "http://",
+      "googleAdEnabled": true,
+      "allowedAgeGroupId": "2"
+    },
+    {
+      "id": "1",
+      "title": "title",
+      "subTitle": "subTitle",
+      "body": "content body",
+      "author": "a@gmail.com",
+      "lastUpdatedDate": "2012-04-23T18:25:43.511Z",
+      "publishedDate": "2012-04-23T18:25:43.511Z",
+      "published": true,
+      "webPublished": true,
+      "typeId": "1",
+      "categoryId": "f443e209-b568-428f-8f6b-6d34ff8abfce",
+      "pushNotification": false,
+      "webReference": "url",
+      "imageUrl": "http://",
+      "likes": 10,
+      "saves": 10,
+      "shareUrl": "http://",
+      "googleAdEnabled": true,
+      "allowedAgeGroupId": "1"
+    },
+    {
+      "title": "amsldn",
+      "subTitle": "",
+      "body": "mdal;ksmd",
+      "author": "dasd",
+      "published": false,
+      "webPublish": false,
+      "typeId": 1,
+      "categoryId": "7fe85b57-28ea-4e6a-a888-49f8c0b520d6",
+      "pushNotification": false,
+      "webReference": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "imageUrl": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "likes": 0,
+      "saves": 0,
+      "shareUrl": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "enableGoogleAds": true,
+      "allowedAgeGroupId": "2",
+      "id": 2
+    }
+  ],
+  "contentType": [
+    {
+      "name": "asdasd asdasd dasda",
+      "type": "asdasd_asdasd",
+      "safeDelete": true,
+      "id": 1
+    }
+  ],
+  "ageGroup": [
+    {
+      "id": "1",
+      "group": "U",
+      "ageMoreThan": 3
+    },
+    {
+      "id": "2",
+      "group": "U/A7+",
+      "ageMoreThan": 7
+    },
+    {
+      "id": "3",
+      "group": "U/A13+",
+      "ageMoreThan": 13
+    },
+    {
+      "id": "4",
+      "group": "U/A17+",
+      "ageMoreThan": 17
+    },
+    {
+      "id": "5",
+      "group": "A",
+      "ageMoreThan": 18
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "type": "story",
+      "name": "Story",
+      "safeDelete": false
+    },
+    {
+      "id": "3",
+      "type": "international",
+      "name": "Inter national"
+    }
+  ],
+  "tiles": [
+    {
+      "id": "1",
+      "title": "title",
+      "subTitle": "subTitle",
+      "body": "content bodyq",
+      "author": "a@gmail.com",
+      "lastUpdatedDate": "2012-04-23T18:25:43.511Z",
+      "publishedDate": "2012-04-23T18:25:43.511Z",
+      "published": true,
+      "webPublish": true,
+      "typeId": 1,
+      "categoryIds": ["1"],
+      "pushNotification": false,
+      "webReference": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "imageUrl": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "likes": 10,
+      "saves": 10,
+      "shareUrl": "https://www.positronx.io/angular-url-validation-with-reactive-forms-tutorial/",
+      "googleAdEnabled": true,
+      "allowedAgeGroupId": "2",
+      "categoryId": "68294d92-8bf5-41c7-a504-3fb8db6150ab",
+      "enableGoogleAds": null
+    }
+  ],
+  "tileType": [
+    {
+      "id": "2",
+      "type": "story",
+      "name": "Story"
+    },
+    {
+      "name": "India",
+      "type": "india",
+      "safeDelete": true,
+      "id": "CGyaCHD"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="float: right; width: 200px; margin: 10px 0px"
+  (click)="openContentDialog(createNewTile())"
+>
+  Create tile
+</button>
+<table class="table">
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col span="3" style="width: 50px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Age Group</th>
+      <th scope="col">Categories</th>
+      <th scope="col">Content types</th>
+      <th scope="col">Published</th>
+      <th scope="col" colspan="3">Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tile of tiles">
+      <td>{{ tile.title }}</td>
+      <td>{{ this.findAgeGroup(tile.allowedAgeGroupId) }}</td>
+      <td></td>
+      <td>{{ this.findTileType(tile.typeId) }}</td>
+      <td>{{ tile.published }}</td>
+      <td>
+        <a (click)="openContentDialog(tile)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="edit"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a (click)="openConfirmDialog(tile, getDeleteMessage(tile))">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="delete"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a (click)="openConfirmDialog(tile, getPublishMessage(tile))">
+          Publish
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

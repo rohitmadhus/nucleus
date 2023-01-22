@@ -1,0 +1,140 @@
+<div style="padding: 60px 30px">
+  <h6 style="display: flex; justify-content: center">Add Content</h6>
+  <mat-divider></mat-divider>
+  <form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="tile">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Tile"
+        name="title"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea
+        class="form-control"
+        id="body"
+        rows="3"
+        name="body"
+        formControlName="body"
+      ></textarea>
+    </div>
+    <div class="form-row" style="display: flex">
+      <div class="form-group col-md-5" style="margin-right: 10px">
+        <label for="type">Type</label>
+        <select
+          class="form-control"
+          id="type"
+          name="typeId"
+          formControlName="typeId"
+        >
+          <option *ngFor="let type of contentTypes" [ngValue]="type.id">
+            {{ type.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group col-md-5" style="margin-left: 10px">
+        <label for="ageGroup">Age Group</label>
+        <select
+          class="form-control"
+          id="ageGroup"
+          name="allowedAgeGroupId"
+          formControlName="allowedAgeGroupId"
+        >
+          <option *ngFor="let ageGroup of ageGroups" [ngValue]="ageGroup.id">
+            {{ ageGroup.group }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-md-5">
+      <label for="categories">Categories</label>
+      <select
+        class="form-control"
+        id="categories"
+        name="categoryId"
+        formControlName="categoryId"
+      >
+        <option *ngFor="let category of categories" [ngValue]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imageUrl"
+        name="imageUrl"
+        formControlName="imageUrl"
+        placeholder="Image URL"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="webReference">Web reference</label>
+      <input
+        type="text"
+        class="form-control"
+        id="webReference"
+        name="webReference"
+        formControlName="webReference"
+        placeholder="Web reference"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="shareUrl">Share URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="shareUrl"
+        name="shareUrl"
+        formControlName="shareUrl"
+        placeholder="Share URL"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author"
+        name="author"
+        formControlName="author"
+        placeholder="Author"
+      />
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="enableGoogleAds"
+          name="enableGoogleAds"
+          formControlName="enableGoogleAds"
+        />
+        <label class="form-check-label" for="enableGoogleAds">
+          Enable Google Ads
+        </label>
+      </div>
+    </div>
+    <div class="form-group" style="display: flex; justify-content: center">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="width: 200px"
+        [disabled]="!contentForm.valid"
+      >
+        {{ submitButton }}
+      </button>
+    </div>
+  </form>
+</div>

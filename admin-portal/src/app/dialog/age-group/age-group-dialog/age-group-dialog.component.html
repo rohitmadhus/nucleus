@@ -1,0 +1,40 @@
+<div style="padding: 60px 30px">
+  <h6 style="display: flex; justify-content: center">Add age group</h6>
+  <mat-divider></mat-divider>
+  <form [formGroup]="ageGroupForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="group">Group</label>
+      <input
+        type="text"
+        class="form-control"
+        id="group"
+        placeholder="Group"
+        name="group"
+        formControlName="group"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Age more than</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ageMoreThan"
+        placeholder="Age more than"
+        name="ageMoreThan"
+        formControlName="ageMoreThan"
+      />
+    </div>
+
+    <div class="form-group" style="display: flex; justify-content: center">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="width: 200px"
+        [disabled]="!ageGroupForm.valid"
+      >
+        {{ submitButton }}
+      </button>
+    </div>
+  </form>
+</div>

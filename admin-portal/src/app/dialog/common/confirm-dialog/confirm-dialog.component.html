@@ -1,0 +1,30 @@
+<div style="padding: 60px 30px">
+  <h6 style="display: flex; justify-content: center">Confirm delete</h6>
+  <mat-divider></mat-divider>
+  <div
+    style="
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    "
+  >
+    <p>{{ msg }}</p>
+  </div>
+  <div style="display: flex; justify-content: space-around">
+    <button
+      type="button"
+      (click)="onSubmit(false)"
+      class="btn btn-outline-success"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      (click)="onSubmit(true)"
+      class="btn btn-outline-danger"
+    >
+      Confirm
+    </button>
+  </div>
+</div>

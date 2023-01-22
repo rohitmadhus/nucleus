@@ -1,0 +1,115 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">ZOWIE</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >App Management</a
+          >
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="app/contents">Content</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="app/content/types"
+                >Content Type</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" routerLink="app/tiles">Tile</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="app/tile/types">Tile Type</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="app/categories"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="app/agegroup">Age Group</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="app/notification/configuration"
+                >Notification</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="app/picture/configuration"
+                >Picture</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Website Management</a
+          >
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="/web/configuration"
+                >Configuration</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Use Management</a
+          >
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="/user/configuration"
+                >Configuration</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" (ngSubmit)="logout()">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Logout
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>

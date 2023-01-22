@@ -1,0 +1,49 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="float: right; width: 200px; margin: 10px 0px"
+  (click)="openTileTypeDialog(createNewTileType())"
+>
+  Create tile type
+</button>
+<table class="table">
+  <colgroup>
+    <col />
+    <col />
+    <col />
+    <col span="2" style="width: 50px" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col" colspan="2">Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tileType of tileTypes">
+      <td>{{ tileTypes.indexOf(tileType) }}</td>
+      <td>{{ tileType.type }}</td>
+      <td>{{ tileType.name }}</td>
+      <td>
+        <a (click)="openTileTypeDialog(tileType)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="edit"
+          ></mat-icon>
+        </a>
+      </td>
+      <td>
+        <a (click)="openConfirmDialog(tileType)">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="edit"
+            fontIcon="delete"
+          ></mat-icon>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
